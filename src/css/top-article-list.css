@@ -1,0 +1,61 @@
+
+/* ========================== STYLE FOR TOP-ARTICLE-LIST COMPONENT =============== */
+.top-10-article{
+    margin-bottom: auto;
+    padding-left: 0px;
+}
+
+.top-10-article * {
+    color: #2984a0;
+    font-family: 'Roboto', sans-serif; 
+}
+
+
+.article-list-title{
+    font-size: 20px;
+    padding-left: 0;
+}
+
+.top-article-list a{
+    font-size: 8px;
+    margin-left: auto;
+}
+
+.article-list-view-all{
+    text-align: right;
+    margin-top: auto;
+    padding-right: 0;
+}
+
+.view-all{
+    width: 100%;
+    /* color: #2984a0; */
+    font-size: 15px;
+    text-decoration: none;
+    
+}
+
+.view-all:hover{
+    color: red;
+    text-decoration: none;
+
+}
+
+.article-no{
+    color: white;
+    background-color: red;
+    width: 30px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.article-item a{
+    color: #2984a0;
+    font-family: 'Roboto', sans-serif; 
+    text-decoration: none;
+}
+
+.article-item a:hover{
+    color: red;
+    text-decoration: none;
+}

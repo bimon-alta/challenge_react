@@ -1,0 +1,70 @@
+/* ========================== STYLE FOR TOP-ARTICLE-VIEW COMPONENT =============== */
+
+.article-container{
+    width: 100%;
+    padding: 10px;
+    color: #4d3d3d;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.article-image{
+    width: 100%;
+}
+
+.article-title{
+    font-size: 25px;
+    
+}
+
+.article-short-desc{
+    font-size: 15px;
+}
+
+.article-info{
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.article-button-footer a{
+    text-decoration: none;
+    color: white;
+    background-color: #5b65c0c4;
+}
+
+.article-button-footer a:hover{
+    color: #5b65c0c4;
+    background-color: white;
+    border: #5b65c0c4 solid 1px;
+}
+
+.article-button {
+    display: inline-block;
+    width: 32%;
+    font-size: 15px;
+    text-align: center; 
+    vertical-align: middle; 
+}
+
+.article-short-desc a{
+    color: white;
+    background-color: red;
+    width: 100px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.article-short-desc a:hover{
+    color: red;
+    background-color: white;
+    border: 1px solid red;
+}
+
+.article-read-more {
+    display: inline-block;
+    width: 32%;
+    font-size: 15px;
+    text-align: center; 
+    vertical-align: middle;
+}

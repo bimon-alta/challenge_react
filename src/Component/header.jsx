@@ -1,4 +1,6 @@
 import React from 'react';
+import SearchBox from './search-box';
+import '../css/header.css';
 
 class Header extends React.Component{
     render() {
@@ -15,10 +17,7 @@ class Header extends React.Component{
                             <div className="header-nav">
                                 <ul className="header-nav__list list-unstyled">  
                                     <li>
-                                        <input type="text" placeholder="Search.." />
-                                        <button type="button" class="btn btn-primary">
-                                            Search
-                                        </button>
+                                        <SearchBox />
                                     </li>
                                     <li> 
                                         <a href="index.html" className="active-page">HOME</a>
