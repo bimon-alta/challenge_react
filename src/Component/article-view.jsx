@@ -24,9 +24,10 @@ class ArticleView extends React.Component{
                         <span className="article-publisher">By Sumanto</span>
                     </div>
                     <div className="article-button-footer">
-                        <a href="" className="article-button">like</a>
-                        <a href="" className="article-button">share</a>
-                        <a href="" className="article-button">unlike</a>                            
+                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+                        <a href="" className="article-button"><i class="fa fa-heart-o"></i></a>
+                        <a href="" className="article-button"><i class="fa fa-share-alt"></i></a>
+                        <a href="" className="article-button"><i class="fa fa-thumbs-o-down"></i></a>                            
                     </div>
                 </div>
             </div>
