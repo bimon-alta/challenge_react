@@ -17,6 +17,8 @@ header{
     margin-left: auto;
 }
 
+
+
 .header-nav__list{
     margin: 0;
 }
@@ -24,6 +26,25 @@ header{
 .header-nav__list li{    
     display: inline-block;
     vertical-align: middle;
+}
+
+
+.list-category li{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 3px;
+
+    font-family: "Muli";
+    font-size: 15px;
+    padding: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #19345E;
+    cursor: pointer;
+}
+
+.list-category li:hover{
+    color: red;
 }
 
 .header-nav__list li a{
@@ -52,6 +73,8 @@ header{
         color: #19345E
     }
 }
+
+
 
 /* .percobaan {
     background-color: red;

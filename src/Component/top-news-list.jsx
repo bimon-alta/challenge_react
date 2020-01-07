@@ -4,8 +4,15 @@ import '../css/top-article-list.css';
 class TopNewsList extends React.Component{
 
     render() {
-        // const topTenNewsList = this.props.theHeadLineNews.slice(0, 10).map((item) => item);
-		const topTenNewsList = this.props.topHeadLines.slice(0, 10).map((item, index)=>{
+
+        const topHeadLines = this.props.listTopTen.filter(item =>{
+            if (item.content !== null && item.urlToImage !== null){
+                return item;
+            }
+            return false;
+        });
+
+		const topTenNewsList = topHeadLines.slice(0, 10).map((item, index)=>{
 			return (
 				<tr className="article-item">
 					<td>

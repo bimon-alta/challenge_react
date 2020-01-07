@@ -1,48 +1,24 @@
 import React from 'react';
 import '../css/article-view.css';
-import axios from 'axios';
 
 
-const apiKey = "1d0fea71b79f4e4dadb41ad8e441ded0";
-const baseUrl = "https://newsapi.org/v2/";
-const urlHeadline = baseUrl + "top-headlines?country=id&apiKey=" + apiKey;
 
 class NewsView extends React.Component{
-    state = {
-        newsList: [],
-        isLoading: true
-    };
-
-    componentDidMount = () => {
-        const self = this;
-
-        //pakai get dgn params
-        // .get(urlHeadline)
-        axios
-            .get('https://newsapi.org/v2/top-headLines?country=id&category=sport&apiKey=1d0fea71b79f4e4dadb41ad8e441ded0')
-            .then(function(response){
-                self.setState({newsList: response.data.articles, isLoading:false});
-            })
-            .catch(function(error){
-                self.setState({isLoading:false});
-            });
-
-    };
+    
+    
 
     render() {
         
-        // const {newsList, isLoading} = this.state;
+        // this.props.listNews;
 
-        // console.warn('newsList adalah :', this.state.newsList);
-
-        const theNewsList = this.state.newsList.filter(item =>{
+        const theNewsList = this.props.listNews.filter(item =>{
             if (item.content !== null && item.urlToImage !== null){
                 return item;
             }
             return false;
         });
 
-        const hasil = theNewsList.map((item, index)=>{
+        const hasil = theNewsList.map( item =>{
 			return (
 				
 				<div className="article-container">
@@ -71,12 +47,6 @@ class NewsView extends React.Component{
         });
         
         
-        // <div>
-        //     {/* {this.state.isLoading ? <div style={{ textAlign: "center"}}> Loading...</div> : hasil} */}
-        // </div>
-
-        // const hasil = <div>oke</div>  {theNewsList[0].urlToImage}  {theNewsList[0].description} {theNewsList[0].url}
-        //{theNewsList[0].publishedAt} {theNewsList[0].author}
 
         return (
             <div className="col-md-7">
