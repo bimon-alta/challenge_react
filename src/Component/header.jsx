@@ -20,16 +20,19 @@ class Header extends React.Component{
                                         <SearchBox />
                                     </li>
                                     <li> 
-                                        <a href="index.html" className="active-page">HOME</a>
+                                        <a href="" className="active-page">NEWS</a>
                                     </li>
                                     <li>
-                                        <a href="about.html">ABOUT</a>
+                                        <a href="">SPORT</a>
                                     </li>
                                     <li>
-                                        <a href="news.html">NEWS</a>
+                                        <a href="">HEALTH</a>
                                     </li>
                                     <li>
-                                        <a href="contact.html">CONTACT</a>
+                                        <a href="">POLITIC</a>
+                                    </li>
+                                    <li>
+                                        <a href="">LOGIN</a>
                                     </li>
                                 </ul>
                             </div>
