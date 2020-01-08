@@ -1,3 +1,10 @@
+Nama Mentee :
+Ofbimon 
+
+URL Challenge React Deploy netlify:
+https://bimon2020.netlify.com/
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
