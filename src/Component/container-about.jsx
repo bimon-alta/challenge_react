@@ -3,7 +3,7 @@ import React from 'react';
 class ContainerAbout extends React.Component{
     render() {
         return (
-            <div classNameName="container">          
+            <div className="container">          
                 <div className="row">
                     <div className="col-md-6">
                         <div className="about-me-content">

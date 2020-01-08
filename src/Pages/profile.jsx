@@ -4,20 +4,26 @@ import Footer from '../Component/footer';
 import PageTitle from '../Component/page-title';
 import { Redirect } from "react-router-dom";
 
-const Profile = props => {
-    const email = localStorage.getItem("email");
-    const userName = localStorage.getItem("name");
-    // const is_login = localStorage.getItem("is_login");
-    const is_login = JSON.parse(localStorage.getItem("is_login"));
 
-    if (is_login === null) {
+import { withRouter } from "react-router-dom";
+import { connect } from "unistore/react";
+
+import { actions } from "../store";
+
+
+
+const Profile = props => {
+    // {console.log("nilai obj user credential", props.user_credential)}
+    props.setAsNewsPage(false);
+
+    if (props.user_credential.is_login != true) {
         return <Redirect to={{ pathname: "/login" }} />;
     } else {
         return (
             <div className='about-body'>
                 <Header />
                 <PageTitle pageTitle="PROFILE"/>
-                <div classNameName="container">          
+                <div className="container">          
                     <div className="row">
                         <div className="col-md-6">
                             <div className="about-me-content">
@@ -28,7 +34,7 @@ const Profile = props => {
                                             User Name
                                         </div>
                                         <div className="detail">
-                                            {userName}
+                                            {props.user_credential.user_name}
                                         </div>
                                     </li>
                                     <li>
@@ -37,7 +43,7 @@ const Profile = props => {
                                             Email Address
                                         </div>
                                         <div className="detail">
-                                            {email}
+                                            {props.user_credential.email}
                                         </div>                            
                                     </li>                            
                                 </ul>
@@ -62,7 +68,8 @@ const Profile = props => {
     }
 }
 
-export default Profile;
+export default connect("user_credential", actions)(withRouter(Profile));
+
 
 
     

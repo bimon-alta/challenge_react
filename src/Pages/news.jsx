@@ -2,22 +2,20 @@ import React from 'react';
 import Header from '../Component/header';
 import ContainerNews from '../Component/container-news';
 import '../css/article.css';
-// import axios from 'axios';
 
 import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
 
 import { actions, getNewsListByCategory } from "../store";
 
-// const apiKey = "1d0fea71b79f4e4dadb41ad8e441ded0";
-// const baseUrl = "https://newsapi.org/v2/";
-// const urlHeadline = baseUrl + "top-headlines?country=id&apiKey=" + apiKey;
 
 class News extends React.Component{
 
     
     componentDidMount = async() => {
         // console.log("cek props di did mount", this.props)
+        this.props.setAsNewsPage(true);
+
         this.props.getTopTenNewsList();
         await getNewsListByCategory(this.props.category);
         // console.log('cek state listNews', this.props.listNews)
@@ -28,9 +26,8 @@ class News extends React.Component{
 
     handleRouterCategoryNews = categoryName => {
         // console.log("nilai setelah klik category", categoryName);
-        const category = categoryName;
-        this.props.history.replace("/news-category/" + category);
-        getNewsListByCategory(category);
+        this.props.history.replace("/news-category/" + categoryName);
+        getNewsListByCategory(categoryName);
     };
 
     
@@ -43,7 +40,7 @@ class News extends React.Component{
             <div className='article-body'>
                 <Header 
                     SearchClick={this.props.handleSearchClick}
-                    handleRouter={e => this.handleRouterCategoryNews(e)}
+                    handleRouterCategoryNews={e => this.handleRouterCategoryNews(e)}
                     isCategoryNews={true}
                     
                 />
