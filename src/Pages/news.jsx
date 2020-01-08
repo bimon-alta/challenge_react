@@ -84,7 +84,7 @@ class News extends React.Component{
         // console.log('Nilai searchbox on change: ', theVal);
         // console.log('Nilai state searchWord', this.state.searchWord);
         
-        if (theVal.length > 3) { 
+        if (theVal.length > 2) { 
             this.getNewsListBySearch(theVal);
         }
 
