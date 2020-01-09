@@ -10,6 +10,8 @@ import Contact from '../Pages/contact';
 import Experience from '../Pages/experience';
 import Login from '../Pages/login';
 import Profile from '../Pages/profile';
+import NotFound from '../Pages/notfound';
+
 import { Provider } from 'unistore/react';
 import { store, actions } from "../store";
 
@@ -27,7 +29,7 @@ const MainRouter = () => {
                     <Route exact path="/experience" component={Experience} />
                     {/* <Route exact path="/news" component={News} /> */}
                     <Route path="/news-category/:category" component={News} />
-                    {/* <Route component=NotMatch /> */}
+                    <Route component={NotFound} />
 
                 </Switch>
             </BrowserRouter>
